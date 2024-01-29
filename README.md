@@ -34,7 +34,7 @@ openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 ``slapadd -vv -F /etc/openldap/slapd.d -n0 -l /root/config.ldif``<br>
 - import the <i>data.ldif</i> (data dump)<br>
 ``slapadd -vv -F /etc/openldap/slapd.d -l /root/data.ldif``<br>
-- ensure ldap:ldap owner on slapd.d
+- ensure ldap:ldap owner on slapd.d<br>
 ``chown -R ldap:ldap /etc/openldap/slapd.d``<br>
 - sort out certificates<br>
 ``(generate of migrate certs - not covered here)``
