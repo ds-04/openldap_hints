@@ -4,6 +4,10 @@ openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
 
 
+<h1>slapadd commands and hints</h1>
+
+Dry mode ``-u`` very useful to check before an operation.
+
 
 <h1>Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
