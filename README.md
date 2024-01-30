@@ -7,6 +7,8 @@ openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
 <h1>Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
+Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is correct location.
+
 
 - install OS on new server<br>
 - install ldap server via RPM/DEB/compile etc.<br>
