@@ -3,6 +3,14 @@
 openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
 
+<h1>ldap tools</h1>
+
+Generally speaking commands with ``slap`` in their name require ``slapd`` to be stopped before they are run - e.g. ``slapadd``.
+
+Whilst commands with ``ldap`` in their name are the oppsite and need ``slapd`` runinng - e.g. ``ldapadd``.
+
+A notable exception is that if you have a sufficintly new OpenLDAP (2.4+ with hdb/mdb) , it is safe to ``slapcat``. So you can safely dump the DB. Of course if in doubt check.
+
 
 <h1>slapadd commands and hints</h1>
 
