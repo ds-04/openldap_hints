@@ -14,6 +14,10 @@ A notable exception is that if you have a sufficintly new OpenLDAP (2.4+ with hd
 
 <h1>ldapsearch commands and hints</h1>
 
+Stop ldapsearch doing ldif line wrapping:
+
+``-o ldif-wrap=no``
+
 Find users within an OU, an example search could look like this, where the search base is the OU of interest:
 
 ``ldapsearch -xLLL -b ou=Users,dc=domain,dc=something,dc=something``
