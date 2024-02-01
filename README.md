@@ -12,6 +12,17 @@ Whilst commands with ``ldap`` in their name are the oppsite and need ``slapd`` r
 A notable exception is that if you have a sufficintly new OpenLDAP (2.4+ with hdb/mdb) , it is safe to ``slapcat``. So you can safely dump the DB. Of course if in doubt check.
 
 
+<h1>ldapsearch commands and hints</h1>
+
+Find users within an OU, an example search could look like this, where the search base is the OU of interest:
+
+``ldapsearch -xLLL -b ou=Users,dc=domain,dc=something,dc=something``
+
+Refining this to count users:
+
+``ldapsearch -xLLL -b ou=Users,dc=domain,dc=something,dc=something "uid=*" uid | grep "uid:" | wc -l``
+
+
 <h1>slapadd commands and hints</h1>
 
 Dry mode ``-u`` very useful to check before an operation.
