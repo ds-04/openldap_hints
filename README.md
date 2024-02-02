@@ -88,6 +88,6 @@ Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is cor
 - ensure ldap:ldap owner on slapd.d<br>
 ``chown -R ldap:ldap /etc/openldap/slapd.d``<br>
 - sort out certificates<br>
-``(generation or migrate certs - not covered here)``
+``(generation or migration of certs is not covered here)``
 - start sladp<br>
 ``systemctl start slapd``<br>
