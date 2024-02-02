@@ -29,7 +29,7 @@ Refining this to count users:
 
 <h1>slapadd commands and hints</h1>
 
-Dry mode ``-u`` very useful to check before an operation.
+Dry mode ``-u`` very useful to check before doing a final ``slapadd`` operation.
 
 Slapadd performance:
 
