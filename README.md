@@ -31,6 +31,11 @@ Refining this to count users:
 
 Dry mode ``-u`` very useful to check before an operation.
 
+Slapadd performance:
+
+``olcToolThreads`` - set this to 2. Specify the maximum number of threads to use in tool mode. This should not be greater than the number of CPUs in the system. The default is 1. This effects slapdadd performance. It gets added to ``cn: config``.
+
+
 
 <h1>Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
