@@ -36,6 +36,23 @@ Slapadd performance:
 ``olcToolThreads`` - set this to 2. Specify the maximum number of threads to use in tool mode. This should not be greater than the number of CPUs in the system. The default is 1. This effects slapdadd performance. It gets added to ``cn: config``.
 
 
+<h1>TLS settings and hints</h1>
+
+Given the below ldif or similar, if you hit error ``ldap_modify: Other (e.g., implementation specific) error (80)`` you may need to check/disable ``selinux``.
+
+
+``dn: cn=config``<br>
+``changetype: modify``<br>
+``replace: olcTLSCACertificateFile``<br>
+``olcTLSCACertificateFile: /path/to/cert.crt``<br>
+``-``<br>
+``replace: olcTLSCertificateFile``<br>
+``olcTLSCertificateFile: /path/to/cert.crt``<br>
+``-``<br>
+``replace: olcTLSCertificateKeyFile``<br>
+``olcTLSCertificateKeyFile: /path/to/key.key``<br>
+
+
 
 <h1>Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
