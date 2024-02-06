@@ -21,9 +21,14 @@ Find users within an OU, an example search could look like this, where the searc
 
 ``ldapsearch -xLLL -b ou=Users,dc=domain,dc=something,dc=something``
 
-Refining this to count users:
+...refining this to count users:
 
 ``ldapsearch -xLLL -b ou=Users,dc=domain,dc=something,dc=something "uid=*" uid | grep "uid:" | wc -l``
+
+Finding if a module is loaded (example ppolicy), using root+SASL:
+
+``ldapsearch -Y EXTERNAL -H ldapi:/// -b "cn=config"  -s sub "(&(objectclass=olcModuleList)(olcModuleLoad={0}ppolicy.la))" | grep ^olcModuleLoad:``
+
 
 
 <h1>ldap{add,modify} commands and hints</h1>
