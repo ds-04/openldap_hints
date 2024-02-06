@@ -72,7 +72,7 @@ Given the below ldif or similar, if you hit error ``ldap_modify: Other (e.g., im
 
 
 
-<h1>Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
+<h1>PROCEDURE: Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
 Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is correct location.
 
