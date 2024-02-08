@@ -41,6 +41,18 @@ Finding if a module is loaded (example ppolicy), using root+SASL:
 ``ldapsearch -Y EXTERNAL -H ldapi:/// -b "cn=config"  -s sub "(&(objectclass=olcModuleList)(olcModuleLoad={0}ppolicy.la))" | grep ^olcModuleLoad:``
 
 
+<h2>EXAMPLE ldapsearches</h2>
+
+<h3>General searches</h3>
+
+
+<h3>Configuration searches</h3>
+
+View config
+
+``ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config "(|(cn=config)(olcDatabase={1}mdb))"``
+
+
 
 <h1>ldap{add,modify} commands and hints</h1>
 
