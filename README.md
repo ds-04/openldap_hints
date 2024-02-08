@@ -99,6 +99,25 @@ Given the below ldif or similar, if you hit error ``ldap_modify: Other (e.g., im
 
 
 
+<h1>ACLs</h1>
+
+Best to refer to the documentation so this. But some guidance is here.
+
+https://www.openldap.org/doc/admin26/access-control.html
+
+Using an LDIF like this will enable you to completely replace the FULL access list for mdb{2}.
+
+This example is incomplete and should be adapted as you see fit... it is merely an example ldif.
+
+``dn: olcDatabase={2}mdb,cn=config``
+``changetype: modify``
+``replace: olcAccess``
+``olcAccess: to attrs=userPassword,shadowLastChange by dn="cn=SomeAdmin,ou=Administrators,dc=example,dc=com" write by anonymous auth by self write by * none``
+``olcAccess: to dn.base="" by * read``
+
+
+
+
 <h1>PROCEDURE: Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
 Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is correct location.
