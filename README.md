@@ -10,7 +10,7 @@ Current:
 
 Now deprecated:
 
-``hdb`` - Hierarchical variant of bdb. More spatially and execution efficient than bdb.
+``hdb`` - Hierarchical variant of bdb. More spatially and execution efficient than bdb.<br>
 ``bdb`` - BerkeleyDB.
 
 
