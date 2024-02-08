@@ -50,6 +50,8 @@ Finding if a module is loaded (example ppolicy), using root+SASL:
 
 View config
 
+(note use of SASL which allows a client to request the server uses credentials established by a method external to the mechanism, to authenticate this client)
+
 ``ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config "(|(cn=config)(olcDatabase={1}mdb))"``
 
 View config, olcAccess
