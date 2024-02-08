@@ -2,6 +2,17 @@
 
 openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
+<h1>openldap database types</h1>
+
+Current:
+
+``mdb`` - Uses OpenLDAP's Lightning Memory-Mapped Database (LMDB) library to store data. Uses no caching and requires no tuning to deliver maximum search performance.
+
+Now deprecated:
+
+``hdb`` - Hierarchical variant of bdb. More spatially and execution efficient than bdb.
+``bdb`` - BerkeleyDB.
+
 
 <h1>ldap tools</h1>
 
