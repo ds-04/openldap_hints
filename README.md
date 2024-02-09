@@ -103,6 +103,17 @@ Given the below ldif or similar, if you hit error ``ldap_modify: Other (e.g., im
 ``olcTLSCertificateKeyFile: /path/to/key.key``<br>
 
 
+<h2>Require TLS</h2>
+
+This ldif is requiring that access to the DIT is protected by a TLS connection - to disallow plain text communication.
+
+``dn: olcDatabase={2}mdb,cn=config``<br>
+``changetype: modify``<br>
+``replace: olcSecurity``<br>
+``olcSecurity: tls=1``
+
+
+
 
 <h1>ACLs</h1>
 
@@ -114,15 +125,18 @@ https://www.openldap.org/doc/admin26/access-control.html
 
 Using an LDIF like this will enable you to completely replace the FULL access list for mdb{2}.
 
-This example is incomplete and should be adapted as you see fit... it is merely an example ldif.
+This example is incomplete/partial and should be adapted as you see fit... it is merely an example ldif.
 
 ``dn: olcDatabase={2}mdb,cn=config``<br>
 ``changetype: modify``<br>
 ``replace: olcAccess``<br>
-``olcAccess: to attrs=userPassword,shadowLastChange by dn="cn=SomeAdmin,ou=Administrators,dc=example,dc=com" write by anonymous auth by self write by * none``<br>
-``olcAccess: to dn.base="" by * read``<br>
+``olcAccess: {0} to attrs=userPassword by dn="cn=SomeAdmin,ou=Administrators,dc=example,dc=com" write by anonymous auth by self =w by * none``<br>
+``olcAccess: {1} to some_other_stuff by some_other_thing``<br>
+``olcAccess: {2} to dn.base="" by * read``<br>
 
+``=w`` is giving explicit write, whereas <i>write</i> gives more.
 
+The last line is necessary otherwise binds are broken. It is providing access to the DSE, so a client can determine some information in order to connect.
 
 
 <h1>PROCEDURE: Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
