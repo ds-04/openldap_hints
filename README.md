@@ -59,6 +59,9 @@ View config, olcAccess
 ``ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config "(|(cn=config)(olcDatabase={1}mdb))" olcAccess``
 
 
+``ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config '(olcAccess=*)' olcAccess olcSuffix``
+
+
 
 <h1>ldap{add,modify} commands and hints</h1>
 
