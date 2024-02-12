@@ -139,6 +139,17 @@ This example is incomplete/partial and should be adapted as you see fit... it is
 The last line is necessary otherwise binds are broken. It is providing access to the DSE, so a client can determine some information in order to connect.
 
 
+
+
+<h1>Logging</h1>
+
+Example LDIF to turn ACL logging on.
+
+``dn: cn=config``<br>
+``changetype: modify``<br>
+``replace: olcLogLevel``<br>
+``olcLogLevel: 128``<br>
+
 <h1>PROCEDURE: Build new master from dump - Import a dump on a new server build and migrate HDB to MDB</h1>
 
 Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is correct location.
