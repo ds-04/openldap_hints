@@ -130,11 +130,11 @@ This example is incomplete/partial and should be adapted as you see fit... it is
 ``dn: olcDatabase={2}mdb,cn=config``<br>
 ``changetype: modify``<br>
 ``replace: olcAccess``<br>
-``olcAccess: {0} to attrs=userPassword by dn="cn=SomeAdmin,ou=Administrators,dc=example,dc=com" write by anonymous auth by self =w by * none``<br>
+``olcAccess: {0} to attrs=userPassword by dn="cn=SomeAdmin,ou=Administrators,dc=example,dc=com" write by anonymous auth by self =xw by * none``<br>
 ``olcAccess: {1} to some_other_stuff by some_other_thing``<br>
 ``olcAccess: {2} to dn.base="" by * read``<br>
 
-``=w`` is giving explicit write, whereas <i>write</i> gives more.
+``=xw`` is giving explicit auth+write, whereas <i>write</i> gives more.
 
 The last line is necessary otherwise binds are broken. It is providing access to the DSE, so a client can determine some information in order to connect.
 
