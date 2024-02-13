@@ -78,10 +78,10 @@ and removing no-user-modification operational attributes.``
 
 <h2>Example LDIF change user password</h2>
 
-``dn: cn=user,ou=example,dc=example,dc=com``
-``changetype: modify``
-``replace: userPassword``
-``userPassword: use_slappasswd_to_generate``
+``dn: cn=user,ou=example,dc=example,dc=com``<br>
+``changetype: modify``<br>
+``replace: userPassword``<br>
+``userPassword: use_slappasswd_to_generate``<br>
 
 
 <h1>slapadd commands and hints</h1>
