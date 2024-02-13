@@ -76,6 +76,13 @@ or  other  LDAP clients without first editing the output.  This editing
 would normally include reordering the records into superior first order
 and removing no-user-modification operational attributes.``
 
+<h2>Example LDIF change user password</h2>
+
+``dn: cn=user,ou=example,dc=example,dc=com``
+``changetype: modify``
+``replace: userPassword``
+``userPassword: use_slappasswd_to_generate``
+
 
 <h1>slapadd commands and hints</h1>
 
