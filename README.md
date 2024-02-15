@@ -61,6 +61,9 @@ View config, olcAccess
 
 ``ldapsearch -Y EXTERNAL -H ldapi:/// -b cn=config '(olcAccess=*)' olcAccess olcSuffix``
 
+Check replication contextCSN - here assumes ``-b`` need not be supplied otherwise supply it (e.g. if not coming from ldap.conf)
+
+``ldapsearch -xLLL -s base ContextCSN``
 
 
 <h1>ldap{add,modify} commands and hints</h1>
