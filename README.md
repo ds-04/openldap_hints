@@ -14,6 +14,22 @@ Now deprecated:
 ``bdb`` - BerkeleyDB.
 
 
+<h1>openldap access types - listeners</h1>
+
+Need to move/tidy this section up... but for quick reference.
+
+ldap:/// 	LDAP 	TCP port 389<br>
+ldaps:/// 	LDAP over SSL 	TCP port 636<br>
+ldapi:/// 	LDAP 	IPC (Unix-domain socket)<br>
+
+Couple of examples<br>
+<br>
+`` ldapadd -Y EXTERNAL -H ldapi:/// -f some_ldif.ldif``<br>
+<br>
+`` ldapadd -H  ldaps:///  -D cn=bind_user,dc=some,dc=example -f some_ldif.ldif``<br>
+
+
+
 <h1>ldap tools</h1>
 
 Generally speaking commands with ``slap`` in their name require ``slapd`` to be stopped before they are run - e.g. ``slapadd``.
