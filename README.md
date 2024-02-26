@@ -165,6 +165,15 @@ This example is incomplete/partial and should be adapted as you see fit... it is
 The last line is necessary otherwise binds are broken. It is providing access to the DSE, so a client can determine some information in order to connect.
 
 
+<h2>Syncrepl and ACLs</h2>
+
+If you make ACL changes on the master which you expect to impact a replica , it is advisable to clean and restart the replica.
+
+See:
+
+``If your ACLs change, then the LDAP server will be sending you notifications about entries which (until just now) did not exist to you, or the LDAP server will not send you notifications about entries that you now can no longer see. This manifests as weird consistency issues, which might cause exceptions to be thrown, or (even worse) might not.``
+
+https://syncrepl-client.readthedocs.io/en/latest/gotchas.html
 
 
 <h1>Logging</h1>
