@@ -222,3 +222,8 @@ Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is cor
 ``(generation or migration of certs is not covered here)``
 - start sladp<br>
 ``systemctl start slapd``<br>
+
+<h1>Issue: slapd not starting via systemd</h1>
+
+Obviously this can be caused by many things, but do check the systemd pidfile location AND also check olcPidFile in cn=config. It may be olcPidFile needs set (to match systemd). Check logs for pidfile error.
+
