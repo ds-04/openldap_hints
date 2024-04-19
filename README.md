@@ -227,3 +227,10 @@ Before proceeding with final stags (slapadd) verify /etc/openldap/slapd.d is cor
 
 Obviously this can be caused by many things, but do check the systemd pidfile location AND also check olcPidFile in cn=config. It may be olcPidFile needs set (to match systemd). Check logs for pidfile error.
 
+<h1>Other/Misc</h1>
+
+Search a slapcat dump entry within an ldif dump file.
+
+``sed -n '/dn: cn=Something/,/modifiersName:/p' data.ldif  | grep something``
+
+
