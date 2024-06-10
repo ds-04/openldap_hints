@@ -61,6 +61,9 @@ Finding if a module is loaded (example ppolicy), using root+SASL:
 
 <h3>General searches</h3>
 
+Search an OU (by setting base to that OU) for entries and sort by gidNumber
+
+``ldapsearch -S gidNumber -xLLL -b ou=some_ou_name,dc=something,dc=something``
 
 <h3>Configuration searches</h3>
 
