@@ -93,7 +93,7 @@ Use at own risk... this might go into a file you run an ldapdelete on. It will p
 
  redirect above to file and then dry run delete e.g.
 
-``ldapdelete -n -r -f listOfDNRemove.txt``
+``ldapdelete -n -vv -r -f listOfDNRemove.txt``
 
 
 <h1>ldap{add,modify} commands and hints</h1>
