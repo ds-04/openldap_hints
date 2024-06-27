@@ -85,6 +85,13 @@ Check replication contextCSN - here assumes ``-b`` need not be supplied otherwis
 ``ldapsearch -xLLL -s base ContextCSN``
 
 
+<h2>Advanced searches</h2>
+
+Use at own risk... this might go into a file you run an ldapdelete on. It will produce the children (one level) of the ou=people
+
+ ``ldapsearch -xLLL -s one -b "ou=people,dc=foo,dc=com" "(cn=*)" dn | awk -F": " '$1~/^\s*dn/{print $2}' ``
+
+
 <h1>ldap{add,modify} commands and hints</h1>
 
 
