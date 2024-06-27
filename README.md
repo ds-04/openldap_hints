@@ -91,6 +91,10 @@ Use at own risk... this might go into a file you run an ldapdelete on. It will p
 
  ``ldapsearch -xLLL -s one -b "ou=people,dc=foo,dc=com" "(cn=*)" dn | awk -F": " '$1~/^\s*dn/{print $2}' ``
 
+ redirect above to file and then dry run delete e.g.
+
+``ldapdelete -n -r -f listOfDNRemove.txt``
+
 
 <h1>ldap{add,modify} commands and hints</h1>
 
