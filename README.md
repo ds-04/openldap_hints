@@ -95,6 +95,15 @@ Use at own risk... this might go into a file you run an ldapdelete on. It will p
 
 ``ldapdelete -n -vv -r -f listOfDNRemove.txt``
 
+---------
+
+Output an OU search then count the entries (DNs) whilst removing empty lines. Here using intermediate file, though you dont have to.
+
+``ldapsearch -o ldif_wrap=no -xLLL -s sub -b "ou=people,dc=foo,dc=com" dn > some_file``
+<br>
+``grep "\S" some_file | wc -l``
+
+
 
 <h1>ldap{add,modify} commands and hints</h1>
 
