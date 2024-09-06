@@ -254,10 +254,12 @@ Obviously this can be caused by many things, but do check the systemd pidfile lo
 
 Search a slapcat dump entry within an ldif dump file.
 
+``sed -n '/dn: cn=Something/,/modifiersName:/p' data.ldif  | grep something``
+
 <h1>Useful man pages</h1>
 
 slapo-ppolicy
 
-``sed -n '/dn: cn=Something/,/modifiersName:/p' data.ldif  | grep something``
+
 
 
