@@ -261,5 +261,23 @@ Search a slapcat dump entry within an ldif dump file.
 slapo-ppolicy
 
 
+<h1>SSSD considerations</h1>
 
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_authentication_and_authorization_in_rhel/understanding-sssd-and-its-benefits_configuring-authentication-and-authorization-in-rhel#identity-and-authentication-providers-for-SSSD_understanding-SSSD-and-its-benefits
+
+Taken from above URL 13.09.24
+
+Table 3.1. Available Combinations of Identity and Authentication Providers
+
+| Identity Provider	| Authentication Provider |
+| :--- | :--- |
+| Identity Management [a] | Identity Management |
+| Active Directory | Active Directory |
+| LDAP | LDAP |
+| LDAP | Kerberos |
+| Proxy | Proxy |
+| Proxy | LDAP |
+| PRoxy | Kerberos |
+
+[a] An extension of the LDAP provider type.
 
