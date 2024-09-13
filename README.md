@@ -277,7 +277,7 @@ Table 3.1. Available Combinations of Identity and Authentication Providers
 | LDAP | Kerberos |
 | Proxy | Proxy |
 | Proxy | LDAP |
-| PRoxy | Kerberos |
+| Proxy | Kerberos |
 
 [a] An extension of the LDAP provider type.
 
