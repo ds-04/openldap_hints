@@ -281,3 +281,23 @@ Table 3.1. Available Combinations of Identity and Authentication Providers
 
 [a] An extension of the LDAP provider type.
 
+
+
+<h1>Python ldap3</h1>
+
+https://ldap3.readthedocs.io/en/latest/index.html
+
+```
+#!/srv/example/example_venv/bin/python3 or python3 somewhere
+from ldap3 import Server, Connection, ALL
+server = Server('ldaps://example', get_info=ALL, use_ssl=True, port=636)
+conn = Connection(server, 'cn=binduser,dc=example,dc=ex,dc=uk', 'SOME_PW', auto_bind=True)
+filter = '(objectclass=posixAccount)'
+var_attributes=['sn','cn']
+conn.search(search_base='dc=example,dc=ex,dc=uk', search_filter=filter, attributes=var_attributes, search_scope='SUBTREE')
+debug1=conn.entries
+print(debug1)
+```
+
+
+
