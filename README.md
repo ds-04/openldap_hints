@@ -2,6 +2,14 @@
 
 openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
+```diff
+
+CURRENT TODOS:
+
+- Verify slapadd doesn't respect memberOf ... slapd needs to be online for memberOf
+
+```
+
 <h1>openldap database types</h1>
 
 Current:
