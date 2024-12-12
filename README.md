@@ -6,7 +6,7 @@ openldap_hints - collection of commands or procedures to help managing OpenLDAP.
 
 CURRENT TODOS:
 
-- Verify slapadd doesn't respect memberOf ... slapd needs to be online for memberOf
+- Writeup: slapadd doesn't respect memberOf ... slapd needs to be online for memberOf ... as its an operational-on-write-action
 
 ```
 
