@@ -10,6 +10,16 @@ CURRENT TODOS:
 
 ```
 
+<h1>Openldap versions</h1>
+
+As of Q4 2024:
+
+2.5 outgoing LTS, move away from this or prior 2x versions
+2.6 LTS
+2.7 features release
+
+https://ldap.com/2024/07/16/openldap-2-6-long-term-support-announcement/
+
 <h1>openldap database types</h1>
 
 Current:
