@@ -319,4 +319,27 @@ print(debug1)
 ```
 
 
+<h1>Schema and related notes</h1>
+
+String based length
+
+```
+4.1.2.  Attribute Types
+```
+
+```
+   A suggested minimum upper bound on the number of characters in a
+   value with a string-based syntax, or the number of bytes in a value
+   for all other syntaxes, may be indicated by appending this bound
+   count inside of curly braces following the syntax's OBJECT IDENTIFIER
+   in an Attribute Type Description.  This bound is not part of the
+   syntax name itself.  For instance, "1.3.6.4.1.1466.0{64}" suggests
+   that server implementations should allow a string to be 64 characters
+   long, although they may allow longer strings.  Note that a single
+   character of the Directory String syntax may be encoded in more than
+   one octet since UTF-8 [RFC3629] is a variable-length encoding.
+```
+
+https://www.rfc-editor.org/rfc/rfc4512.txt
+
 
