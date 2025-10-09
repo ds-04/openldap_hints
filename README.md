@@ -343,3 +343,43 @@ String based length
 https://www.rfc-editor.org/rfc/rfc4512.txt
 
 
+
+<h1>Apache Directory Studio</h1>
+
+<h2>How to access cn=config (the configuration database) using Apache DS.</h2>
+
+- You need an olcRootDN entry, its important the suffix is correct to apply this
+
+  ```
+  dn: olcDatabase={0}config,cn=config
+  changetype: modify
+  replace: olcRootDN
+  olcRootDN: cn=admin,cn=config
+  ```
+  
+- You need a corresponding olcRootPW entry
+
+  ```
+  dn: olcDatabase={0}config,cn=config
+  changetype: modify
+  replace: olcRootPW
+  olcRootPW: {SSHA}sddasdsadsssomestuffheresadasdasdasda
+  ```  
+
+- Then configure the Apache DS connection to use these settings
+
+```
+Bind DN:
+cn=admin,cn=config
+
+Bind password
+*****
+
+Base DN
+cn=config
+```
+
+
+
+
+
