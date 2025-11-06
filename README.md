@@ -346,6 +346,12 @@ https://www.rfc-editor.org/rfc/rfc4512.txt
 
 <h1>Apache Directory Studio</h1>
 
+<h2>How to tunnel for Apache DS</h2>
+
+ssh -L 9000:server_IP:636 ssh_alias_server_intermediate
+
+Then point Apache DS at localhost:9000 in connection setup
+
 <h2>How to access cn=config (the configuration database) using Apache DS.</h2>
 
 - You need an olcRootDN entry, its important the suffix is correct to apply this
