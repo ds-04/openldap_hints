@@ -76,6 +76,20 @@ Finding if a module is loaded (example ppolicy), using root+SASL:
 ``ldapsearch -Y EXTERNAL -H ldapi:/// -b "cn=config"  -s sub "(&(objectclass=olcModuleList)(olcModuleLoad={0}ppolicy.la))" | grep ^olcModuleLoad:``
 
 
+<h2>ldapsearch on command line - extra hints/options</h2>
+
+Specify ``-y`` for password file, but this must contain no extra characters. eg. no terminating line characters. The entire file is read.
+
+To remove extra characters:
+
+```cat .currentpass.txt | tr -d '\n\r' > .cleanedpass.txt```
+
+The ``CACERT`` option can be given on command line, infront on the ldapsearch command:
+
+```LDAPTLS_CACERT=./path_to_CA_cert_file ldapsearch...```
+
+
+
 <h2>EXAMPLE ldapsearches</h2>
 
 <h3>General searches</h3>
