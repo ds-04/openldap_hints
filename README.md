@@ -399,6 +399,32 @@ Base DN
 cn=config
 ```
 
+<h2>Version M17 timeout on connection issues</h2>
+
+
+```The authentication failed ERR_04169_RESPONSE_QUEUE_EMPTIED The response queue has been emptied, no response was found.```
+
+https://issues.apache.org/jira/browse/DIRSTUDIO-1287
+
+```
+Robin added a comment - 19/Aug/21 10:08
+I tried this on M16 and it works consistently.
+
+Random tests on M17:
+
+Single-click the connection in the Connections view and then expand the DIT object in the LDAP Browser view: Does not work - QUEUE_EMPTIED
+Double-click the connection in the Connections view and wait for it to connect: Does not work - QUEUE_EMPTIED
+Double-click the connection in the Connections view and then expand the DIT and Root DSE objects in the LDAP browser view whilst the Progress view shows it is trying to connect: Appears to work every time
+Strange one, but at least it looks like there's a workaround that allows this to work on M17.
+```
+
+
+
+
+
+
+
+
 
 
 
