@@ -315,6 +315,14 @@ Table 3.1. Available Combinations of Identity and Authentication Providers
 [a] An extension of the LDAP provider type.
 
 
+<h1>SSSD hints</h1>
+
+multiple user search base syntax in sssd.conf
+
+```ldap_user_search_base = ou=users,dc=example,dc=com???ou=users2,dc=example,dc=com??```
+
+can do same for group search base
+
 
 <h1>Python ldap3</h1>
 
