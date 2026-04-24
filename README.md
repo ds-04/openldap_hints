@@ -137,6 +137,10 @@ Output an OU search then count the entries (DNs) whilst removing empty lines. He
 ``grep "\S" some_file | wc -l``
 
 
+Search using base, and remove [with sed] ou matching something (with wildcard) and 4 lines after... this might be useful for cleaning a search to then make a diagram
+
+``ldapsearch -xLLL | sed -e '/ou=something*/,+4d'`` 
+
 
 <h1>ldap{add,modify} commands and hints</h1>
 
